@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6366f1"/>
+      <stop offset="60%"  stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#g)"/>
+
+  <!-- Glow behind icon -->
+  <ellipse cx="256" cy="260" rx="140" ry="80" fill="white" fill-opacity="0.12"/>
+
+  <!-- Stacked layers icon (scaled up from 24x24 viewBox to ~280x280 centered) -->
+  <g transform="translate(116, 130) scale(11.67)">
+    <!-- Top layer (solid fill) -->
+    <path d="M12 3L2 8l10 5 10-5-10-5z" fill="white" fill-opacity="0.95"/>
+    <!-- Middle layer -->
+    <path d="M2 13l10 5 10-5" stroke="white" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round"
+          fill="none" stroke-opacity="0.75"/>
+    <!-- Bottom layer -->
+    <path d="M2 18l10 5 10-5" stroke="white" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round"
+          fill="none" stroke-opacity="0.45"/>
+  </g>
+</svg>
